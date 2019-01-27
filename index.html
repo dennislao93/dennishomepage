@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>My Homepage</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+</head>
+<body>
+	<div>
+		<div>
+			<table id="myTable"></table>
+		</div>
+		<div>
+			<form onsubmit="return addEntry()">
+				<table>
+					<tr>
+						<td><input id="newName" type="text" value="[Name]" /></td>
+						<td><input id="newWeight" type="text" value="[Weight]" /></td>
+						<td><input type="submit"  value="Add"/></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div>
+			<input type="button" value="Save"  onclick="saveData()" />
+			<br>
+			<input type="button" value="Refresh" onclick="loadData()" />
+		</div>
+		<div>
+			<button onclick="whatToDo()">What shall I do today?</button>
+			<br>
+			<span id="doThing"></span>
+		</div>
+	</div>
+</body>
+</html>
