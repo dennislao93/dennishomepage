@@ -38,7 +38,7 @@ app.get('/insertDummy', (req, res) => {
 app.get('/getActivities', (req, res) => {
 	activityModel.getAll((activities) => {
 		let resString = 'Results=';
-		if (!activities) {
+		if (!activities || activities.length == 0) {
 			resString += 'empty';
 			return res.send(resString);
 		}
