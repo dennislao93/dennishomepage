@@ -1,5 +1,7 @@
 let tableElem;
 let nextNum;
+// let locationHost = location.host + ':3000';
+let locationHost = "http://dennishomepage.herokuapp.com";
 
 $(document).ready(function() {
 	tableElem = $('#myTable');
@@ -10,7 +12,7 @@ function loadData() {
 	tableElem.empty();
 	nextNum = 0;
 	$.ajax({
-		url: 'http://' + location.host + ':3000/getActivities',
+		url: 'http://' + location.host + '/getActivities',
 		success: (data) => {
 			let dataContents = data.substring(8);
 			if (dataContents == 'empty') {
@@ -63,7 +65,7 @@ function saveData() {
 	});
 	$.ajax({
 		method: 'POST',
-		url: 'http://' + location.host + ':3000/setActivities',
+		url: 'http://' + location.host + '/setActivities',
 		data: JSON.stringify(activities),
 		contentType: 'application/json; charset=utf-8',
 		success: (msg) => {
