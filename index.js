@@ -12,7 +12,7 @@ function loadData() {
 	tableElem.empty();
 	nextNum = 0;
 	$.ajax({
-		url: 'http://' + location.host + '/getActivities',
+		url: locationHost + '/getActivities',
 		success: (data) => {
 			let dataContents = data.substring(8);
 			if (dataContents == 'empty') {
@@ -65,7 +65,7 @@ function saveData() {
 	});
 	$.ajax({
 		method: 'POST',
-		url: 'http://' + location.host + '/setActivities',
+		url: locationHost + '/setActivities',
 		data: JSON.stringify(activities),
 		contentType: 'application/json; charset=utf-8',
 		success: (msg) => {
