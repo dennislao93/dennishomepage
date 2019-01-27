@@ -20,7 +20,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const port = 3000;
+// const port = 3000;
+const port = process.env.PORT || 8080; // heroku
 
 app.get('/insertDummy', (req, res) => {
 	let activityObj = new activityModel({
