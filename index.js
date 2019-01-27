@@ -17,6 +17,7 @@ function loadData() {
 			let dataContents = data.substring(8);
 			if (dataContents == 'empty') {
 				console.log('Empty results');
+				return;
 			}
 			// activity.name:activity.weight;
 			let  rows = dataContents.substring(0, dataContents.length - 1).split(';');
