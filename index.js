@@ -1,7 +1,7 @@
 let tableElem;
 let nextNum;
 // let locationHost = location.host + ':3000';
-let locationHost = "http://dennishomepage.herokuapp.com";
+let locationHost = "https://dennishomepage.herokuapp.com";
 
 $(document).ready(function() {
 	tableElem = $('#myTable');
